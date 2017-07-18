@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table border = "2" align ="center">
+
+<h2>Celcius to Fahrenhet</h2>
+
+<p>Inserta un numero para convertir</p>
+	<tr>
+		<td><p><input id="c" onkeyup="convert('C')"> Celsius</p></td></td>
+
+		<td><p><input id="f" onkeyup="convert('F')"> Fahrenheit</p></td> 
+		
+	</tr>
+
+
+
+<script>
+function convert(grados) {
+    var x;
+    if (grados== "C") {
+        x = document.getElementById("c").value * 9 / 5 + 32;
+        document.getElementById("f").value = Math.round(x);
+    } else {
+        x = (document.getElementById("f").value -32) * 5 / 9;
+        document.getElementById("c").value = Math.round(x);
+    }
+}
+</script>
+
+</body>
+</html>
